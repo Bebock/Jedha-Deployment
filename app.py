@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-DATA_URL = '../src/get_around_delay_analysis.csv'
+DATA_URL = 'https://github.com/Bebock/Deploy/blob/main/get_around_delay_analysis.xlsx'
 
 
 ### App
