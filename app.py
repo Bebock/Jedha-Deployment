@@ -123,8 +123,6 @@ def page3():
     dataset_pricing = load_data()
     data_load_state.text("") # change text from "Loading data..." to "" once the the load_data function has run
     
-    loaded_model = pickle.load(open('final_model.sav', 'rb'))
-    result = loaded_model
     def predict_price():
         import joblib
         #new_df = dataset_pricing
@@ -136,10 +134,10 @@ def page3():
         
         df = dataset_pricing.drop('rental_price_per_day', axis=1)
         
-        loaded_model = joblib.load('final_reg_model.pkl')
-        #joblib.load('column_names.pkl')))
+        loaded_model = pickle.load(open('final_model.sav', 'rb'))
+        pipeline = pickle.load(open('scaler.pkl', 'rb'))
         
-        result = loaded_model.predict(df.iloc[0:1])
+        result = loaded_model.predict(pipeline.transform(df.iloc[0:1]))
         return result
     st.markdown("# Prédiction")
     st.sidebar.markdown("# Prédiction 🎉")
