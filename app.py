@@ -139,7 +139,7 @@ def page3():
         pred_input = loaded_scaler.transform(df)
         
         loaded_model = joblib.load(open('final_model.joblib', 'rb'))
-        result = loaded_model.predict(df.iloc([0:1]))
+        result = loaded_model.predict(df.iloc[0:1])
         return result
     st.markdown("# Prédiction")
     st.sidebar.markdown("# Prédiction 🎉")
