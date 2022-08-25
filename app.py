@@ -185,7 +185,7 @@ def page3():
     else:
         hiver = False
     if st.button("Predict"):
-        predict_price()
+        st.text(str(predict_price()))
     
 page_names_to_funcs = {
     "Main Page": main_page,
