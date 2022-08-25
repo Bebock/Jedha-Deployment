@@ -135,8 +135,8 @@ def page3():
         
         df = dataset_pricing.drop('rental_price_per_day', axis=1)
         
-        loaded_model = pickle.load(open('final_reg_model.pkl', 'rb'))
-        pipeline = pickle.load(open('preprocessor.pkl', 'rb'))
+        loaded_model = pickle.load(open('final_reg_model.pkl'))
+        pipeline = pickle.load(open('preprocessor.pkl'))
         
         result = loaded_model.predict(pipeline.transform(df.iloc[0:1]))
         return result
