@@ -122,6 +122,7 @@ def page3():
     data_load_state = st.text('Chargement...')
     dataset_pricing = load_data()
     data_load_state.text("") # change text from "Loading data..." to "" once the the load_data function has run
+    dataset_pricing[['model_key', 'paint_color', 'car_type', 'fuel']] = dataset_pricing[['model_key', 'paint_color', 'car_type', 'fuel']].astype('string')
     
     def predict_price():
         import joblib
