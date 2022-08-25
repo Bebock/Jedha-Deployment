@@ -137,7 +137,7 @@ def page3():
         df = dataset_pricing.drop('rental_price_per_day', axis=1)
         
         loaded_model = joblib.load('final_reg_model.pkl')
-        joblib.load('column_names.pkl')))
+        #joblib.load('column_names.pkl')))
         
         result = loaded_model.predict(df.iloc[0:1])
         return result
