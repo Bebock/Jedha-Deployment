@@ -133,12 +133,13 @@ def page3():
         #pred_df = pd.DataFrame(np.zeros((1,14)), columns=title)
         categorical = dataset_pricing.columns.drop(["mileage","engine_power", "rental_price_per_day"])
         continuous = ["mileage","engine_power"]
+        
         loaded_scaler = joblib.load(open('scaler.joblib', 'rb'))
         df = dataset_pricing.drop('rental_price_per_day', axis=1)
         pred_input = loaded_scaler.transform(df)
         
         loaded_model = joblib.load(open('final_model.joblib', 'rb'))
-        result = loaded_model.predict(df[:
+        result = loaded_model.predict(df.iloc[0:1])
         return result
     st.markdown("# Prédiction")
     st.sidebar.markdown("# Prédiction 🎉")
