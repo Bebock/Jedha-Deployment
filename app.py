@@ -125,7 +125,6 @@ def page3():
     
     def predict_price(values):
         import joblib
-<<<<<<< HEAD
         predict_array = np.zeros((1,13))
         im_df = pd.DataFrame(predict_array, columns=['model_key', 'mileage', 'engine_power', 'fuel', 'paint_color',
        'car_type', 'private_parking_available', 'has_gps',
@@ -135,7 +134,6 @@ def page3():
         loaded_model = joblib.load('finalized_model.sav')
         pipeline = joblib.load('finalized_prepoc.sav')
         result = loaded_model.predict(pipeline.transform(im_df))
-=======
         #new_df = dataset_pricing
         #new_df.drop('rental_price_per_day',axis=1,inplace=True)
         #title = new_df.columns.tolist()
@@ -143,13 +141,12 @@ def page3():
         categorical = dataset_pricing.columns.drop(["mileage","engine_power", "rental_price_per_day"])
         continuous = ["mileage","engine_power"]
         
-        df = dataset_pricing.drop('rental_price_per_day', axis=1)
+        #df = dataset_pricing.drop('rental_price_per_day', axis=1)
         
         loaded_model = joblib.load('finalized_model.sav')
         pipeline = joblib.load('finalized_prepoc.sav')
         
-        result = loaded_model.predict(pipeline.transform(df.iloc[0:1]))
->>>>>>> a1c1c9f3bc1f73d7aac8b46a1801dc84ce4b8c07
+        result = loaded_model.predict(pipeline.transform(im_df.iloc[0:1]))
         return result
     st.markdown("# Prédiction")
     st.sidebar.markdown("# Prédiction 🎉")
