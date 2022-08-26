@@ -193,13 +193,10 @@ def page3():
     else:
         hiver = False
     if st.button("Predict"):
-<<<<<<< HEAD
         list_values = [marque,int(kil), int(puissance), energie, couleur, car_type, parking, gps, ac, auto, gac, speed, hiver]
         st.text(''.join(str(list_values)))
         st.text(str(predict_price(list_values)))
-=======
         st.text(str(predict_price()))
->>>>>>> a1c1c9f3bc1f73d7aac8b46a1801dc84ce4b8c07
     
 page_names_to_funcs = {
     "Main Page": main_page,
