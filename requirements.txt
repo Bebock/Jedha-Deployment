@@ -1,7 +1,7 @@
 jupyterlab
 pandas
 numpy
-scikit_learn == 1.0.2
+sklearn
 matplotlib
 seaborn
 streamlit
