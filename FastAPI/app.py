@@ -54,7 +54,7 @@ async def hi():
     return 'Hello there 🤗'
 
 @app.post("/predict", response_model=PredictionOut)
-def predict(values: ListIn):
+async def predict(values: ListIn):
     test = [[values.model_key,
     values.mileage,
     values.engine_power,
@@ -72,4 +72,4 @@ def predict(values: ListIn):
     return {"prix": round(prix,2)}
 
 if __name__=="__main__":
-    uvicorn.run(app, host="0.0.0.0", port=4000) # Here you define your web server to run the `app` variable (which contains FastAPI instance), with a specific host IP (0.0.0.0) and port (4000)
+    uvicorn.run(app, host="127.0.0.1", port=8000) 
