@@ -79,10 +79,10 @@ Le déploiement a été réalisé avec [Streamlit](https://streamlit.io/), [Hero
 Auteurs :
 
     Helene alias @Bebock
-    Jean alias @Chedeta
 
 La dream team :
 
+    Jean alias @Chedeta
     Henri alias @HenriPuntous
     Nicolas alias @NBridelance
 
