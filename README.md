@@ -2,6 +2,8 @@
 
 ---
 
+Video de présentation [ici](https://share.vidyard.com/watch/C5p5NXSKRK9CFsmX8dPBpP?)
+
 # 1. Présentation du projet
 
 GetAround est un service de AirBnB, spécialisé dans la location de véhicules allant de quelques heures à quelques jours. 
