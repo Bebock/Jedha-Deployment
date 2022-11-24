@@ -4,7 +4,7 @@ response = requests.post(
     "https://fastapi-ln.herokuapp.com/predict", 
     json={"model_key": "Toyota",
   "mileage": 200000,
-  "engine_power": 190,
+  "engine_power": 200,
   "fuel": "diesel",
   "paint_color": "green",
   "car_type": "suv",
