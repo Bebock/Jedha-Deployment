@@ -2,6 +2,8 @@
 
 ---
 
+Video de présentation [ici](https://share.vidyard.com/watch/C5p5NXSKRK9CFsmX8dPBpP?)
+
 # 1. Présentation du projet
 
 GetAround est un service de AirBnB, spécialisé dans la location de véhicules allant de quelques heures à quelques jours. 
@@ -21,7 +23,11 @@ Le service compte 3 flows différents permettant d'établir le contrat :
 # 2. Objectif 
 
 Le projet a pour objectif principal de s'intéresser aux retards lors du checkout, et à leurs conséquences sur les locations suivantes et donc sur les contrats perdus / non honorés, et donc sur la satisfaction des utilisateurs de GetAround. 
-Il est donc indispensable de laisser un délai minimum entre 2 réservations successives d'un même véhicule afin de palier au mieux à ces retards sans pour autant entamer le nombre de réservations et donc le chiffre d'affaires de la société (et des loueurs). 
+Il est en effet indispensable de laisser un délai minimum entre 2 réservations successives d'un même véhicule afin de palier au mieux à ces retards sans pour autant entamer le nombre de réservations et donc le chiffre d'affaires de la société (et des loueurs). 
+
+**Objectif 1** : Déployer un dashboard permettant de visualiser l'impact du palier / seuil choisi sur les locations
+
+**Objectif 2** : Déployer un modèle de Machine Learning permettant à l'utilisateur de cibler un prix de location en fonction des caractéristiques de son véhicule
 
 ---
 
@@ -36,14 +42,28 @@ Il est donc indispensable de laisser un délai minimum entre 2 réservations suc
 
 ## Fichiers
 
-    Le notebook Part 1 - EDA.ipynb permet de visualiser les données brutes (images et annotations) ainsi qu'une première EDA.
-    Le notebook Part 2 - Yolov5.ipynb formatte les données pour l'utilisation de YoloV5 et permet d'entrainer le modèle
-    Le notebook Part 3 - Deployment.ipynb se base sur le meilleur modèle choisi par l'utilisateur et le déploie grâce à outil en ligne qui permet à l'utilisateur de charger une photo sur laquelle il souhaite détecter les défauts.
+- Le notebook Part 1 - Getaround_EDA_Model.ipynb permet une première EDA et contient les modèles de prédiction du prix de location testés avant déploiement.
+- Les fichiers finalized_model.sav et finalized_prepoc.sav contiennent le modèle de prédiction et le preprocessing des données nécessaire au fonctionnement du modèle
+- Le fichier app.py contient le code pour déployer un dashboard et le modèle de prédiction via Streamlit
+- Le dossier FastAPI contient les fichiers nécessaires au déploiement du modèle de prédiction via API 
 
 ---
 
 # 4. Outils développés 
 
+## Dashboard 
+
+Le dashboard déployé est disponible [ici](https://getaround-ln.herokuapp.com/) aux sections Accueil et Dashboard. 
+![image](https://user-images.githubusercontent.com/38078432/203615883-599081ef-1776-45f7-bf91-b4545832b4ec.png)
+![image](https://user-images.githubusercontent.com/38078432/203615983-417a4bca-0b0d-437d-a5de-b6d344d2a7ae.png)
+
+## Outils de prédiction
+
+Le déploiement du modèle de prédiction du prix de location selon les caractéristiques du véhicule est disponible via Streamlit en section [Prediction](https://getaround-ln.herokuapp.com/)
+![image](https://user-images.githubusercontent.com/38078432/203616113-63659286-1216-48dd-8c38-92b8cd94017e.png)
+
+ou via FastAPI [ici](https://fastapi-ln.herokuapp.com/docs) et le fichier Request.py
+![image](https://user-images.githubusercontent.com/38078432/203616211-06134dfd-7c6b-423c-b574-29084ee6aa77.png)
 
 ---
 
@@ -51,18 +71,19 @@ Il est donc indispensable de laisser un délai minimum entre 2 réservations suc
 
 ## Outils
 
-    Les notebooks ont été développés avec Visual Studio Code.
-    Le déploiement a été réalisé avec Streamlit et Heroku.
+Les notebooks ont été développés avec [Visual Studio Code](https://code.visualstudio.com/).
+
+Le déploiement a été réalisé avec [Streamlit](https://streamlit.io/), [Heroku](https://www.heroku.com/platform) et [fastAPI](https://fastapi.tiangolo.com/). Le déploiement sur Heroku a été réalisé avec une connexion à Github. 
 
 ## Auteurs & contributeurs
 
 Auteurs :
 
     Helene alias @Bebock
-    Jean alias @Chedeta
 
 La dream team :
 
+    Jean alias @Chedeta
     Henri alias @HenriPuntous
     Nicolas alias @NBridelance
 
