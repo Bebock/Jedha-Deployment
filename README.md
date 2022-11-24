@@ -57,7 +57,7 @@ Le dashboard déployé est disponible [ici](https://getaround-ln.herokuapp.com/)
 ![image](https://user-images.githubusercontent.com/38078432/203615883-599081ef-1776-45f7-bf91-b4545832b4ec.png)
 ![image](https://user-images.githubusercontent.com/38078432/203615983-417a4bca-0b0d-437d-a5de-b6d344d2a7ae.png)
 
-## Outil de prédiction
+## Outils de prédiction
 
 Le déploiement du modèle de prédiction du prix de location selon les caractéristiques du véhicule est disponible via Streamlit en section [Prediction](https://getaround-ln.herokuapp.com/)
 ![image](https://user-images.githubusercontent.com/38078432/203616113-63659286-1216-48dd-8c38-92b8cd94017e.png)
